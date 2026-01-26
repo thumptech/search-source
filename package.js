@@ -22,10 +22,11 @@ Package.onUse(function (api) {
     api.use('meteorhacks:picker@1.0.1', 'server');
     //This is needed for ES6 imports/exports to work
     api.use('ecmascript');
-    api.addFiles('src/server.js', 'server');
-    api.addFiles('src/client.js', 'client');
-    api.mainModule('src/exports.js');
-    //api.export(['SearchSource']);
+    api.use('modules');
+
+    api.mainModule('src/server.js', 'server');
+    api.mainModule('src/client.js', 'client');
+
 });
 
 Package.onTest(function (api) {

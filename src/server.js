@@ -74,3 +74,4 @@ function getSourceData(name, query, options) {
         throw new Meteor.Error(404, "No such search source: " + name);
     }
 }
+

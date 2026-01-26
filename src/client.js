@@ -243,3 +243,5 @@ SearchSource.prototype._getRegExpFilterRegExp = _.once(function () {
     }).join("|");
     return new RegExp("(" + regExpCharsReplace + ")", "g");
 });
+
+

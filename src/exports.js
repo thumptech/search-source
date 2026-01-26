@@ -1,11 +1,12 @@
-import {Meteor} from 'meteor/meteor';
+/*import {Meteor} from 'meteor/meteor';
 
 let SearchSource;
 
+
 if (Meteor.isServer) {
-    import('./server').then(lib => SearchSource = lib.SearchSource);
+    SearchSource = (await import('./server')).SearchSource;
 } else {
-    import('./client').then(lib => SearchSource = lib.SearchSource);
+    SearchSource = (await import('./client')).SearchSource;
 }
 
-export {SearchSource};
+export {SearchSource};*/
