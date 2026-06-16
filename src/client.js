@@ -83,7 +83,7 @@ SearchSource.prototype._updateStore = function (data) {
     let self = this;
     let storeIds = _.pluck(this.store.find().fetch(), "_id");
     let currentIds = [];
-    data.forEach(function (item) {
+    data?.forEach(function (item) {
         currentIds.push(item._id);
         self.store.update(item._id, item, {upsert: true});
     });
